@@ -31,12 +31,12 @@
 import { createComponent, ref, provide } from '@vue/composition-api'
 import Drawer from '~/components/Drawer.vue'
 import Footer from '~/components/Footer.vue'
-import counterStore from '~/store/contents'
+import contentsStore from '~/store/contents'
 
 export default createComponent({
   components: { Drawer, Footer },
   setup() {
-    provide('ContentsStore', counterStore())
+    provide('ContentsStore', contentsStore())
     const state = {
       drawer: ref(false),
       title: ref('Firebase CMS'),
